@@ -7,17 +7,11 @@ application up and running.
 
 * Ruby version : ruby 2.3.1p112
 
-* System dependencies
+* System dependencies : /
 
-* Database creation
 
-* Database initialization : sqlite3
+##Initialize application
 
-* Services (job queues, cache servers, search engines, etc.) : /
-
-* Deployment instructions : /
-
-##Initialize
 
 ####In the parent directory
 ```
@@ -41,7 +35,24 @@ If database doesn't exist :
 rails db:create
 ```
 
-If migration are pending
+####In the directory Sock-It run
+```
+bundle install
+```
+
+####Run the server
+```
+rails s
+```
+
+#####Create and migrate
+
+If database doesn't exist :
+```
+rails db:create
+```
+
+If migration are pending : 
 ```
 rails db:migrate
 ```
