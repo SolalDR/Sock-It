@@ -11,49 +11,49 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :color %>
-    <%= f.text_field :color %>
+    <%= f.text_field :color, class:"form-control" %>
   </div>
   <hr>
   <% n = 0 %>
   <%= f.fields_for :images do |ff| %>
     <% image = n < @product.images.length - 1 ? @product.images[n] : nil; %>
     <% n += 1 %>
-      <div class="field">
+      <div class="form-group">
         <%= ff.label :file %>
         <% if image %>
           <%= image_tag image.file.url(:thumb) %>
-          <%= ff.check_box :_destroy %>
+          <%= ff.check_box :_destroy, class:"form-check-input" %>
         <% else %>
-          <%= ff.file_field :file %>
+          <%= ff.file_field :file, class:"form-control-file" %>
         <% end %>
           <span class="remove">Destroy</span>
           <span class="add">Add</span>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= ff.label :alt %>
-        <%= ff.text_field :alt %>
+        <%= ff.text_field :alt, class:"form-control" %>
       </div>
       <hr>
     <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :price %>
-    <%= f.number_field :price %>
+    <%= f.number_field :price, class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"btn btn-primary" %>
   </div>
 <% end %>
