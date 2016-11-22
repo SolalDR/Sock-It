@@ -15,7 +15,8 @@
  */
  @import "core/mixin";
  @import "core/variable";
- @import "bootstrap.min.css";
+ @import "core/reset.css";
+ @import "core/bootstrap.min.css";
 
  @import "products";
  @import "scaffolds";
