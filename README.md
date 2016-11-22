@@ -52,7 +52,19 @@ If database doesn't exist :
 rails db:create
 ```
 
-If migration are pending : 
+If migration are pending :
 ```
 rails db:migrate
+```
+
+##How To Commit
+
+After work :
+```
+git stash
+git pull
+git stash apply
+git add .
+git commit -m "Your message goes here"
+git push
 ```
