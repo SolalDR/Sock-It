@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122105913) do
+ActiveRecord::Schema.define(version: 20161122153404) do
+
+  create_table "images", force: :cascade do |t|
+    t.string   "alt"
+    t.string   "file"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "product_id"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.index ["product_id"], name: "index_images_on_product_id"
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
