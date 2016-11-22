@@ -3,22 +3,38 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+##Configuration
 
-* Ruby version
+* Ruby version : ruby 2.3.1p112
 
-* System dependencies
+* System dependencies : /
 
-* Configuration
 
-* Database creation
+##Initialize application
 
-* Database initialization
+####In the parent directory
+```
+git clone https://github.com/SolalDR/Sock-It.git
+```
 
-* How to run the test suite
+####In the directory Sock-It run
+```
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+####Run the server
+```
+rails s
+```
 
-* Deployment instructions
+#####Create and migrate
 
-* ...
+If database doesn't exist :
+```
+rails db:create
+```
+
+If migration are pending
+```
+rails db:migrate
+```
