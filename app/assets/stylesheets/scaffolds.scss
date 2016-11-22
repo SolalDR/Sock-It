@@ -5,8 +5,19 @@ body {
   font-size: 13px;
   line-height: 18px;
   margin: 0px;
-  padding-top: 100px;
+  padding-top: 90px;
+  padding-bottom: 100px;
 }
+
+.wrapper-small {
+  width: 850px;
+  margin: auto;
+}
+
+.col-sm-offset-3-2 {
+  margin-left: 12.5%;
+}
+
 
 h1 {
   margin: 0;
@@ -33,6 +44,7 @@ a {
     color: #666;
   }
 
+  text-decoration: none;
 }
 
 th {
@@ -88,4 +100,23 @@ div {
 
 label {
   display: block;
+}
+
+.bg-grey-light {
+  background-color: #d8d8d8;
+}
+.bg-blue {
+  background-color: #6bc5d8;
+}
+.bg-grey-dark {
+  background-color: #64666a;
+}
+
+@media screen and (max-width: 767px){
+  .wrapper-small {
+    width: 100%;
+  }
+  .col-sm-offset-3-2 {
+    margin-left: 0;
+  }
 }

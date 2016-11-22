@@ -1,5 +1,5 @@
 header {
-  @include box-shadow(0px 0px 5px #888888);
+  // @include box-shadow(0px 0px 5px #888888);
   .searchBar {
     padding: 25px 50px 0;
     width:auto;
@@ -29,8 +29,11 @@ header {
   }
   .title-container {
     padding: 5px;
+    padding-top: 15px;
     h1 {
       font-family: "LatoBlack";
+      text-transform: uppercase;
+      font-size: 2em;
     }
     .sub-title {
 
@@ -64,6 +67,7 @@ header {
   left: 0;
   width: 100%;
   background-color: white;
+  z-index: 2;
   .nav-bar-left {
     height: 70px;
     position: absolute;
@@ -79,5 +83,25 @@ header {
     position: absolute;
     right: 0;
     top: 0;
+  }
+}
+
+.main-nav {
+  background-color: white;
+  height: 60px;
+  text-align: center;
+  ul {
+    height : 100%;
+    display: inline-block;
+    a {
+      li {
+        display:inline-block;
+        padding: 10px 15px;
+        color:grey;
+        font-family: "LatoRegular";
+        letter-spacing: 1;
+        text-transform: uppercase;
+      }
+    }
   }
 }
