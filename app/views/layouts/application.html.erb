@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SockIt</title>
+    <title>Sock-It</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,25 @@
   </head>
 
   <body>
+    <header>
+      <div class="nav-bar-left searchBar little">
+        <form action="">
+          <label class="magnifying_glass" for="search_bar"></label>
+          <input id="search_bar" type="text" placeholder="Rechercher">
+        </form>
+      </div>
+      <div class="nav-bar-center title-container">
+        <h1>Sock-it</h1>
+        <p class="sub-title">Paris</p>
+      </div>
+      <a href="">
+        <div class="nav-bar-right cart">
+            <span class="cart_icon"></span>
+          <span class="number_article">(3)</span>
+        </div>
+      </a>
+
+    </header>
     <%= yield %>
   </body>
 </html>
