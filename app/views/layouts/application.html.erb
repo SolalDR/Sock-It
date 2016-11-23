@@ -20,12 +20,12 @@
         <h1>Sock-it</h1>
         <p class="sub-title">Paris</p>
       </div>
-      <a href="">
-        <div class="nav-bar-right cart">
+        <%= link_to(cart_path) do %>
+          <div class="nav-bar-right cart">
             <span class="cart_icon"></span>
-          <span class="number_article">(3)</span>
-        </div>
-      </a>
+            <span class="number_article"><%= @shopping_cart.total %> €</span>
+          </div>
+        <% end %>
     </header>
       <nav class="main-nav">
         <ul>
