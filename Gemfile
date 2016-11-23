@@ -34,6 +34,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'acts_as_shopping_cart'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
