@@ -19,3 +19,7 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+#ignore image of paperclip
+/public/system/
+public/system/
