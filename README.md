@@ -57,6 +57,15 @@ If migration are pending :
 rails db:migrate
 ```
 
+To load the seeds :
+```
+rails db:seed
+```
+
+Now you can login : 
+Email =>      admin@admin.com
+Password =>   adminpass
+
 ##How To Commit
 
 After work :
