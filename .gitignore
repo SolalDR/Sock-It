@@ -23,3 +23,5 @@
 #ignore image of paperclip
 /public/system/
 public/system/
+/public/system/*
+public/system/*
