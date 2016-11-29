@@ -1,5 +1,7 @@
 # README
 
+<a href="https://codeclimate.com/github/SolalDR/Sock-It"><img src="https://codeclimate.com/github/SolalDR/Sock-It/badges/gpa.svg" /></a>
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
