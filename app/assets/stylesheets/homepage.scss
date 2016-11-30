@@ -5,56 +5,57 @@
       display: block;
     }
   }
-  .products-container {
-    .product {
-      margin-bottom: 30px;
-      .visuel {
-        position: relative;
-        img {
-          width: 100%;
-        }
-        .list-color {
-          width: 100%;
-          position: absolute;
-          bottom: 3%;
-          left: 3%;
+}
+
+.products-container {
+  .product {
+    margin-bottom: 30px;
+    .visuel {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .list-color {
+        width: 100%;
+        position: absolute;
+        bottom: 3%;
+        left: 3%;
+        height: 15px;
+        .color {
+          width: 15px;
           height: 15px;
-          .color {
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            margin-right: 0px;
-            border: 1px solid transparent;
-            &.active {
-              border: 1px solid white;
-            }
+          display: inline-block;
+          margin-right: 0px;
+          border: 1px solid transparent;
+          &.active {
+            border: 1px solid white;
           }
         }
       }
-      .content {
-        text-align: center;
-        text-align: center;
-        padding-top: 10px;
-        .title {
-          font-size: 1.2em;
-          color: #343434;
-          padding: 5px;
-        }
-        .price {
-          color: #5b5b5b;
-          font-size: 1em;
-          padding-bottom: 10px;
-        }
-        .add-product-to-cart {
-          display: inline-block;
-          padding: 7px 30px;
-          border: 1px solid #707070;
-          text-transform: uppercase;
-          color: #707070;
-          font-size: .9em;
-          font-family: "LatoRegular";
-          letter-spacing: 1px;
-        }
+    }
+    .content {
+      text-align: center;
+      text-align: center;
+      padding-top: 10px;
+      .title {
+        font-size: 1.2em;
+        color: #343434;
+        padding: 5px;
+      }
+      .price {
+        color: #5b5b5b;
+        font-size: 1em;
+        padding-bottom: 10px;
+      }
+      .add-product-to-cart {
+        display: inline-block;
+        padding: 7px 30px;
+        border: 1px solid #707070;
+        text-transform: uppercase;
+        color: #707070;
+        font-size: .9em;
+        font-family: "LatoRegular";
+        letter-spacing: 1px;
       }
     }
   }

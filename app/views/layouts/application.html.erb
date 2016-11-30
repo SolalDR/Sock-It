@@ -29,15 +29,11 @@
     </header>
       <nav class="main-nav">
         <ul>
-          <a href="">
-            <li>Homme</li>
-          </a>
-          <a href="">
-            <li>Femme</li>
-          </a>
-          <a href="">
-            <li>Enfant</li>
-          </a>
+          <% @categories.each do |category| %>
+            <%= link_to category_path(category) do %>
+              <li><%= category.libCategory.upcase %></li>
+            <% end %>
+          <% end %>
           <a href="">
             <li>Nouveautés</li>
           </a>

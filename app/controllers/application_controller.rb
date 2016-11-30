@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     render "layouts/home"
   end
 
-  before_filter :extract_shopping_cart
+  before_filter :extract_shopping_cart, :extract_categories
 
   protected
     def extract_shopping_cart
@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
         @shopping_cart = ShoppingCart.create
       end
       session[:shopping_cart_id] = @shopping_cart.id
+    end
+
+    def extract_categories
+      @categories = Category.all
     end
 
 end
