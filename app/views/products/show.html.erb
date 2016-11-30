@@ -1,40 +1,44 @@
-<div id="show">
+<div id="show" class="container">
 
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </p>
+    <div class="image col-md-7 col-sm1-12">
+      <div>
+        <% i= @product.images.first %>
+        <%= image_tag i.file.url, id:"main-pic" %>
+      </div>
+      <div id="container-list-pic">
+        <ul>
+          <% @product.images.each do |i| %>
+            <% if i!=@product.images.first %>
+              <li><%= image_tag i.file.url, class: "min-pic" %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
 
-  <p>
-    <strong>Color:</strong>
-    <%= @product.color %>
-  </p>
+  <div class="fiche-product col-md-5 col-sm1-12">
+    <p id="name">
+      <%= @product.name %>
+    </p>
 
-  <p>
-    <strong>Price:</strong>
-    <%= @product.price %>
-  </p>
+    <p id="description">
+      <%= @product.description %>
+    </p>
 
-  <p>
-    <strong>Image:</strong>
-    <% @product.images.each do |i| %>
-      <%= image_tag i.file.url %>
-    <% end %>
+    <p id="color">Couleur :
+      <%= @product.color %>
+    </p>
 
-  </p>
-  <p>
-    <strong>Catégory:</strong>
-    <% if @product.category %>
-       <%= @product.category.libCategory %>
-     <% end %>
-  </p>
+    <p id="price">Prix :
+      <%= @product.price %> €
+    </p>
+<%= link_to "Ajouter au pannier", product_to_cart_path(@product), class: "add-product-to-cart" %>
+
+  </div>
+
 
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
