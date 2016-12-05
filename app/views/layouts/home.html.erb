@@ -4,16 +4,16 @@
   </div>
   <!-- <div class="wrapper-small"> -->
     <div class="row products-container">
-      <% @products.each do |product| %>
       <% i = 0 %>
-      <div class="product col-sm-3 <% if i%3==0 %>col-sm-offset-3-2<% end %>">
+      <% @products.each do |product| %>
+      <div class="product col-sm-3 <% if i%3===0 %>col-sm-offset-3-2<% end %>">
+        <p class="price"><%= product.price %>€</p>
         <div class="visuel">
-          <%= image_tag product.images[0].file.url %>
+          <%= image_tag product.images[0].file.url(:medium) %>
         </div>
         <div class="content">
           <p class="title"><%= product.name %></p>
-          <p class="price"><%= product.price %>€</p>
-          <%= link_to "Commander", product_to_cart_path(product.id), class: "add-product-to-cart" %>
+          <%= link_to "", product_to_cart_path(product.id), class: "add-product-to-cart" %>
         </div>
       </div>
       <% i+=1 %>
