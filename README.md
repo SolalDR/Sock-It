@@ -25,6 +25,21 @@ git clone https://github.com/SolalDR/Sock-It.git
 bundle install
 ```
 
+####Install stripe
+To install the stripe gem
+```
+gem install netrc -v '0.11.0'
+gem install domain_name -v '0.5.20161129'
+```
+To create stripe account, <a href="https://stripe.com/fr ">click here</a>
+In config/secrets.yml, add API keys get after your stripe's registration.
+To get the API key follow <a href="https://launchschool.com/blog/stripe-checkout">this tutorial</a> after logged in
+``` yml
+development:
+    stripe_publishable_key: pk_test_xxxxxxxxxxxxxxxxxxxxx
+    stripe_secret_key:  sk_test_xxxxxxxxxxxxxxxxxxxxx
+```
+
 ####Run the server
 ```
 rails s
@@ -64,7 +79,7 @@ To load the seeds :
 rails db:seed
 ```
 
-Now you can login : 
+Now you can login :
 Email =>      admin@admin.com
 Password =>   adminpass
 

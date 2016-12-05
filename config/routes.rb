@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :products
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "application#home"
 
@@ -16,5 +17,7 @@ Rails.application.routes.draw do
   get 'cart/clear' => "shopping_cart#clear", as: :cart_clear
   get "cart/remove/:id" => "shopping_cart#remove", as: :remove_product_from_cart
   get "cart/remove/:id/:quantity" => "shopping_cart#remove", as: :remove_products_from_cart
+
+  resources :charges
 
 end
