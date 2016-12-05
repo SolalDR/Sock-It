@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get 'cart/add/:id' => 'shopping_cart#add', as: :product_to_cart
   get 'cart/clear' => "shopping_cart#clear", as: :cart_clear
   get "cart/remove/:id" => "shopping_cart#remove", as: :remove_product_from_cart
+  get "cart/remove/:id/:quantity" => "shopping_cart#remove", as: :remove_products_from_cart
+
 end

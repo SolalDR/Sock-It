@@ -9,19 +9,26 @@ class ShoppingCartController < ApplicationController
     render "shopping_cart/index"
   end
 
+  def validate_facturation
+  end
+
+  def validate_delivery
+  end
+
+  def validate_recap
+  end
+
+  def validate_payment
+  end
+
   def add
     product = Product.find(params[:id])
     quantity = 1
-
     if params.include? :quantity
       quantity = params[:quantity].to_i.abs
     end
-
+    
     @shopping_cart.add(product, product.price, quantity)
-
-    # if @shopping_cart.shopping_cart_items.include? product
-    #
-    # end
     redirect_to cart_path
   end
 

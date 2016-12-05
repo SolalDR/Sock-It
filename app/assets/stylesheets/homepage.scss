@@ -60,6 +60,11 @@
         font-family: "LatoBold";
         letter-spacing: 1px;
         width: calc(100% - 25px);
+        transition: .3s;
+        text-decoration: none;
+        &:hover {
+          color: rgb(61, 61, 61);
+        }
       }
       .add-product-to-cart {
         display: inline-block;

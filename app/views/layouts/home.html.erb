@@ -12,10 +12,12 @@
           <%= image_tag product.images[0].file.url(:medium) %>
         </div>
         <div class="content">
+          <%= link_to product do %>
           <p class="title"><%= product.name %></p>
+          <% end %>
           <%= link_to "", product_to_cart_path(product.id), class: "add-product-to-cart" %>
         </div>
       </div>
       <% i+=1 %>
       <% end %>
-</div>
+    </div>

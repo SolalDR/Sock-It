@@ -1,29 +1,37 @@
 <div class="container" id="shopping_cart">
   <% if @shopping_cart.shopping_cart_items.length > 0 %>
   <%= link_to "Vider mon panier", cart_clear_path, class:"btn" %>
+  <h2>Panier</h2>
   <table class="table">
     <thead>
       <tr>
-        <th>Id</th>
-        <th>Nom</th>
-        <th>Prix</th>
+        <th></th>
         <th>Quantité</th>
-        <th>Total Price</th>
-        <th>Actions</th>
+        <th>Prix</th>
       </tr>
     </thead>
     <tbody>
     <% @shopping_cart.shopping_cart_items.each do |cart_item| %>
-      <tr>
-        <td><%= cart_item.id %></td>
-        <td><%= cart_item.item.name %></td>
-        <td><%= cart_item.item.price %></td>
-        <td><%= link_to "-", remove_product_from_cart_path(cart_item.item.id), class: "btn-small" %><%= cart_item.quantity %><%= link_to "+", product_to_cart_path(cart_item.item.id), class: "btn-small" %></td>
-        <td><%= cart_item.price*cart_item.quantity %></td>
+      <tr class="product-row">
+        <td class="product">
+          <%= image_tag cart_item.item.images[0].file.url(:thumb) %>
+          <div class="content">
+            <p class="title"><%= cart_item.item.name %></p>
+            <p class="description"><%= cart_item.item.description %></p>
+            <%= link_to "Supprimer", remove_products_from_cart_path({ id: cart_item.item.id, quantity: cart_item.quantity }), class: "delete" %>
+          </div>
+        </td>
+        <td class="quantity">
+          <%= link_to "-", remove_product_from_cart_path(cart_item.item.id), class: "btn-small" %><%= cart_item.quantity %><%= link_to "+", product_to_cart_path(cart_item.item.id), class: "btn-small" %>
+        </td>
+        <td class="price">
+          <%= cart_item.price*cart_item.quantity %>
+        </td>
       </tr>
     <% end %>
     <tbody>
   <table>
+  <%= link_to "Commander", root_path, class: "btn btn-command" %>
   <% else  %>
   <p>Votre panier est vide</p>
   <% end %>
