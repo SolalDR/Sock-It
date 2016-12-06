@@ -75,8 +75,10 @@ ActiveRecord::Schema.define(version: 20161205213624) do
     t.string   "address"
     t.integer  "zipcode"
     t.string   "city"
-    t.string   "adresscomplement"
-    t.string   "adresscomplementbis"
+    t.string   "lastname"
+    t.string   "firstname"
+    t.string   "addresscomplement"
+    t.string   "addresscomplementbis"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

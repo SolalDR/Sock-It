@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   get "/profile" => "profile#show", as: :profile_show
   get "/profile/edit" => "profile#edit", as: :profile_edit
+  patch "profile/update" => "profile#update"
 
   resources :products
   resources :categories

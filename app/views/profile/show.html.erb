@@ -1,0 +1,17 @@
+<div class="container">
+  <h2><%= current_user.firstname %></h2>
+  <h3>Informations : </h3>
+  <p>
+    Adresse : <%= current_user.address %>
+  </p>
+  <p>
+    Complément d'adresse : <%= current_user.addresscomplement %>
+  </p>
+  <p>
+    Code postal : <%= current_user.zipcode %>
+  </p>
+  <p>
+    Ville : <%= current_user.city %>
+  </p>
+  <%= link_to "Editer adresse", profile_edit_path %>
+</div>
