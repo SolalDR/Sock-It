@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Facturation</h2>
+  <%= form_for @payment do |f| %>
+    <div class="form-group">
+      <%= f.label :fact_firstname %>
+      <%= f.text_field :fact_firstname, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :fact_lastname %>
+      <%= f.text_field :fact_lastname, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :fact_address %>
+      <%= f.text_field :fact_address, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :fact_addresscomplement %>
+      <%= f.text_field :fact_addresscomplement, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :fact_addresscomplementbis %>
+      <%= f.text_field :fact_addresscomplementbis, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :fact_zipcode %>
+      <%= f.text_field :fact_zipcode, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :fact_city %>
+      <%= f.text_field :fact_city, class:"form-control" %>
+    </div>
+    <%= f.hidden_field :step, value: "fact" %>
+    <div class="actions">
+      <%= f.submit class:"btn btn-primary", value:"Passer à la livraison" %>
+    </div>
+  <% end %>
+</div>

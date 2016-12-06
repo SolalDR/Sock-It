@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% @payment.shopping_cart.shopping_cart_items.each do |p| %>
+<% product = Product.find(p.item_id) %>
+<%= product.name %>
+<%= image_tag product.images[0].file.url(:thumb) %>
+<% end %>
 <%= link_to 'Edit', edit_payment_path(@payment) %> |
 <%= link_to 'Back', payments_path %>

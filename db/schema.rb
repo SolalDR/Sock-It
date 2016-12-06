@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205213624) do
+ActiveRecord::Schema.define(version: 20161206101758) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "libCategory"
@@ -29,6 +29,28 @@ ActiveRecord::Schema.define(version: 20161205213624) do
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
     t.index ["product_id"], name: "index_images_on_product_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string   "fact_firstname"
+    t.string   "fact_lastname"
+    t.string   "fact_address"
+    t.string   "fact_addresscomplement"
+    t.string   "fact_addresscomplementbis"
+    t.string   "fact_zipcode"
+    t.string   "fact_city"
+    t.string   "deliver_firstname"
+    t.string   "deliver_lastname"
+    t.string   "deliver_address"
+    t.string   "deliver_addresscomplement"
+    t.string   "deliver_addresscomplementbis"
+    t.string   "deliver_zipcode"
+    t.string   "deliver_city"
+    t.integer  "total_price"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -57,6 +79,8 @@ ActiveRecord::Schema.define(version: 20161205213624) do
   create_table "shopping_carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "payment_id"
+    t.index ["payment_id"], name: "index_shopping_carts_on_payment_id"
   end
 
   create_table "users", force: :cascade do |t|

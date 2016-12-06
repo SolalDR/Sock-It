@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :payments
   root to: "application#home"
 
   #users
@@ -10,6 +9,13 @@ Rails.application.routes.draw do
   get "/profile" => "profile#show", as: :profile_show
   get "/profile/edit" => "profile#edit", as: :profile_edit
   patch "profile/update" => "profile#update"
+
+  get "/payments/fact" => "payments#edit_fact", as: :payments_fact
+  get "/payments/delivery" => "payments#edit_delivery", as: :payments_delivery
+  get "/payments/show" => "payments#show", as: :payments_show
+  get "/payments/buy" => "payments#buy", as: :payments_buy
+  resources :payments
+
 
   resources :products
   resources :categories

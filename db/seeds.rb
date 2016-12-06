@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+guest = User.create! :email => 'guest@guest.com', :password => 'guestpass', :password_confirmation => 'guestpass'
 user = User.create! :email => 'admin@admin.com', :password => 'adminpass', :password_confirmation => 'adminpass', :address => 'test', :zipcode => 33000, :city => 'SockItCity'
 
 cat1 = Category.create! :libCategory => "Homme"

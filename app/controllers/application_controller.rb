@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :extract_shopping_cart
 
   def home
     @products = Product.last(6)

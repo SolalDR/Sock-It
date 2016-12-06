@@ -5,16 +5,16 @@ class CreatePayments < ActiveRecord::Migration[5.0]
       t.string :fact_firstname
       t.string :fact_lastname
       t.string :fact_address
-      t.string :fact_adresscomplement
-      t.string :fact_adresscomplementbis
+      t.string :fact_addresscomplement
+      t.string :fact_addresscomplementbis
       t.string :fact_zipcode
       t.string :fact_city
 
       t.string :deliver_firstname
       t.string :deliver_lastname
-      t.string :deliver_adress
-      t.string :deliver_adresscomplement
-      t.string :deliver_adresscomplementbis
+      t.string :deliver_address
+      t.string :deliver_addresscomplement
+      t.string :deliver_addresscomplementbis
       t.string :deliver_zipcode
       t.string :deliver_city
 

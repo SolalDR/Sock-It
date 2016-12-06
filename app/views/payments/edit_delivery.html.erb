@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Livraison</h2>
+  <%= form_for @payment do |f| %>
+    <div class="form-group">
+      <%= f.label :deliver_address %>
+      <%= f.text_field :deliver_address, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :deliver_addresscomplement %>
+      <%= f.text_field :deliver_addresscomplement, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :deliver_addresscomplementbis %>
+      <%= f.text_field :deliver_addresscomplementbis, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :deliver_zipcode %>
+      <%= f.text_field :deliver_zipcode, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :deliver_city %>
+      <%= f.text_field :deliver_city, class:"form-control" %>
+    </div>
+    <%= f.hidden_field :step, value: "delivery" %>
+    <div class="actions">
+      <%= f.submit class:"btn btn-primary", value:"Passer à la livraison" %>
+    </div>
+  <% end %>
+</div>
