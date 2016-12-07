@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" id="payments_container">
   <%= render "arianne" %>
-  <h2>Facturation</h2>
   <%= form_for @payment do |f| %>
+  <h2>Facturation</h2>
     <div class="form-group">
       <%= f.label :fact_firstname %>
       <%= f.text_field :fact_firstname, class:"form-control" %>
@@ -10,15 +10,15 @@
       <%= f.label :fact_lastname %>
       <%= f.text_field :fact_lastname, class:"form-control" %>
     </div>
-    <div class="form-group">
+    <div class="form-group form-large">
       <%= f.label :fact_address %>
       <%= f.text_field :fact_address, class:"form-control" %>
     </div>
-    <div class="form-group">
+    <div class="form-group form-large">
       <%= f.label :fact_addresscomplement %>
       <%= f.text_field :fact_addresscomplement, class:"form-control" %>
     </div>
-    <div class="form-group">
+    <div class="form-group form-large">
       <%= f.label :fact_addresscomplementbis %>
       <%= f.text_field :fact_addresscomplementbis, class:"form-control" %>
     </div>
@@ -32,7 +32,7 @@
     </div>
     <%= f.hidden_field :step, value: "fact" %>
     <div class="actions">
-      <%= f.submit class:"btn btn-primary", value:"Passer à la livraison" %>
+      <%= f.submit class:"btn btn-primary btn-command", value:"Passer à la livraison" %>
     </div>
   <% end %>
 </div>

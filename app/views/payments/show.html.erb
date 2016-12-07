@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="payments_container">
   <%= render "arianne" %>
   <p id="notice"><%= notice %></p>
 
@@ -7,7 +7,6 @@
   <%= product.name %>
   <%= image_tag product.images[0].file.url(:thumb) %>
   <% end %>
-  <%= link_to 'Edit', edit_payment_path(@payment) %> |
-  <%= link_to 'Back', payments_path %>
-
+  <%= link_to 'Edit', class:"btn btn-command", edit_payment_path(@payment) %> |
+  <%= link_to 'Back', class:"btn btn-command", payments_path %>
 </div>
