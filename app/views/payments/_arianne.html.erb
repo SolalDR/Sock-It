@@ -1,0 +1,16 @@
+<div class="arianne-container">
+  <ul>
+    <%= link_to payments_fact_path do %>
+      <li class="arianne-item <% if current_page?(payments_fact_path) %>active<% end %>">Facturation</li>
+    <% end %>
+    <%= link_to payments_delivery_path do %>
+      <li class="arianne-item <% if current_page?(payments_delivery_path) %>active<% end %>">Livraison</li>
+    <% end %>
+    <%= link_to payments_show_path do %>
+      <li class="arianne-item <% if current_page?(payments_show_path) %>active<% end %>">Recapitulatif</li>
+    <% end %>
+    <%= link_to payments_fact_path do %>
+      <li class="arianne-item <% if current_page?(payments_buy_path) %>active<% end %>">Paiement</li>
+    <% end %>
+  </ul>
+</div>

@@ -1,7 +1,7 @@
 class PaymentsController < ApplicationController
-  before_action :authenticate_user!
   before_action :extract_payment
   before_action :define_next_route, only: :update
+  before_action :hydrate_present_attributes, only: [:edit_fact, :edit_delivery]
 
   # GET /payments
   # GET /payments.json
@@ -11,11 +11,24 @@ class PaymentsController < ApplicationController
 
   # GET /payments/facts/
   def edit_fact
+    if @shopping_cart.shopping_cart_items.length < 1
+      redirect_to root_path
+    end
+  end
+
+  # GET /payments/1/edit
+  def edit_delivery
+    if !test_present_attributes([:fact_firstname, :fact_lastname, :fact_address, :fact_zipcode, :fact_city])
+      redirect_to payments_fact_path
+    end
   end
 
   # GET /payments/1
   # GET /payments/1.json
   def show
+    if !test_present_attributes([:deliver_firstname, :deliver_lastname, :deliver_address, :deliver_zipcode, :deliver_city])
+      redirect_to payments_delivery_path
+    end
   end
 
   # GET /payments/new
@@ -23,9 +36,7 @@ class PaymentsController < ApplicationController
   end
 
 
-  # GET /payments/1/edit
-  def edit_delivery
-  end
+
 
   # POST /payments
   # POST /payments.json
@@ -97,8 +108,31 @@ class PaymentsController < ApplicationController
         @payment = Payment.create
       end
       session[:payment_id] = @payment.id
-
       @payment.shopping_cart  = @shopping_cart
+    end
 
+    def test_present_attributes(attributes)
+      testPresence = true
+      attributes.each do |a|
+        if !@payment.attribute_present?(a)
+          return false
+        end
+      end
+    end
+
+    def hydrate_present_attributes
+      fact_attributes = [:fact_firstname, :fact_lastname, :fact_address, :fact_zipcode, :fact_city]
+      deliver_attributes = [:deliver_firstname, :deliver_lastname, :deliver_address, :deliver_zipcode, :deliver_city]
+      user_attributes = [:firstname, :lastname, :address, :zipcode, :city]
+      i=0
+      while i<user_attributes.length do
+        if !@payment[fact_attributes[i]] && @payment[user_attributes[i]]
+          @payment[fact_attributes[i]] = @payment[user_attributes[i]]
+        end
+        if !@payment[deliver_attributes[i]] && @payment[fact_attributes[i]]
+          @payment[deliver_attributes[i]] = @payment[fact_attributes[i]]
+        end
+        i += 1
+      end
     end
 end

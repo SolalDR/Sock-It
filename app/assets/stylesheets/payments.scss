@@ -1,3 +1,23 @@
 // Place all the styles related to the payments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.arianne-container {
+  ul {
+    .arianne-item {
+      display: inline-block;
+      text-transform: uppercase;
+      &.active {
+        font-weight: bold;
+      }
+    }
+    a {
+      color: #444;
+      text-decoration: none;
+      display: inline-block;
+    }
+    a:not(:last-child)::after {
+      content : ">";
+      text-decoration: none;
+    }
+  }
+}
