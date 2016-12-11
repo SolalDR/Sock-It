@@ -1,0 +1,24 @@
+<div id="popinCart" class="hidden">
+  <div class="container-popin">
+    <div class="header-popin">
+      <p class="title">Ajouter au panier avec succès</p>
+      <a href="" class="continue-cart">Continuer mes achats</a>
+      <button id="close-popin"></button>
+    </div>
+    <div class="header-content">
+      <div class="focus-product">
+        <img src="" alt="" id="product-popin-img">
+        <p id="product-popin-title">Chaussette édition spécial bird</p>
+      </div>
+      <div class="focus-cart">
+        <p class="cart-amount">Votre panier :
+          <span id="amount-popin-cart">1 article</span>
+        </p>
+        <p class="total">Total :
+          <span id="total-popin-cart">14 euros</span>
+        </p>
+        <%= link_to "Commander maintenant", payments_fact_path, class:"btn btn-primary btn-command" %>
+      </div>
+    </div>
+  </div>
+</div>

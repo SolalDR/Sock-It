@@ -130,6 +130,46 @@ label {
 .bg-grey-dark {
   background-color: #64666a;
 }
+#notice {
+  background-color: #173A5A;
+}
+#alert {
+  background-color: #651616;
+}
+
+#notice, #alert {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation-name : noticeAppear;
+  animation-duration: 4s;
+}
+@keyframes noticeAppear {
+  0% {
+    bottom: -100px;
+    display: block;
+  }
+  10%{
+    bottom: 0;
+  }
+  90%{
+    bottom: 0;
+  }
+  99%{
+    display: block;
+  }
+  100%{
+    bottom: -100px;
+    display: none;
+  }
+}
 
 @media screen and (max-width: 767px){
   .wrapper-small {
