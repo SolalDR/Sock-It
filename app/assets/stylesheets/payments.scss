@@ -34,6 +34,9 @@
     input {
       border-radius: 0;
       border: 2px solid #b3b3b3;
+      &[type="submit"] {
+        border: 0;
+      }
     }
     .form-group {
       max-width: 450px;

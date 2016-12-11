@@ -7,6 +7,5 @@
   <%= product.name %>
   <%= image_tag product.images[0].file.url(:thumb) %>
   <% end %>
-  <%= link_to 'Edit', edit_payment_path(@payment), class:"btn btn-command" %> |
-  <%= link_to 'Back', payments_path, class:"btn btn-command" %>
+  <%= link_to 'Acheter', payments_buy_path, class:"btn btn-command" %>
 </div>

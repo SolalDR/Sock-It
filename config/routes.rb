@@ -13,14 +13,17 @@ Rails.application.routes.draw do
   get "/payments/fact" => "payments#edit_fact", as: :payments_fact
   get "/payments/delivery" => "payments#edit_delivery", as: :payments_delivery
   get "/payments/show" => "payments#show", as: :payments_show
-  get "/payments/buy" => "payments#buy", as: :payments_buy
+  get "/payments/buy" => "payments#new_charge", as: :payments_buy
+  get "/payments/destroy" => "payments#destroy", as: :payments_destroy
+  get "/payments/success" => "payments#success", as: :payments_success
+  post "/payments/charge" => "payments#buy", as: :payments_charge
+
+  get "/shopping/all" => "shopping_cart#all", as: :shopping_all
+
+
   resources :payments
-
-
-
   resources :products
   resources :categories
-  resources :charges
 
 
   #shopping_cart

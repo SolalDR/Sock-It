@@ -12,6 +12,10 @@ class ShoppingCartController < ApplicationController
   def validate_facturation
   end
 
+  def all
+    @shopping_carts = ShoppingCart.all
+  end
+
   def validate_delivery
   end
 
@@ -27,7 +31,7 @@ class ShoppingCartController < ApplicationController
     if params.include? :quantity
       quantity = params[:quantity].to_i.abs
     end
-    
+
     @shopping_cart.add(product, product.price, quantity)
     redirect_to cart_path
   end
