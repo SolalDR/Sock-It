@@ -1,5 +1,6 @@
 header {
   // @include box-shadow(0px 0px 5px #888888);
+  border-bottom: 1px solid #CCC;
   .searchBar {
     padding: 25px 50px 0;
     width:auto;
@@ -60,7 +61,7 @@ header {
 }
 
 header {
-  height: 70px;
+  height: 80px;
   text-align: center;
   position: fixed;
   top: 0;

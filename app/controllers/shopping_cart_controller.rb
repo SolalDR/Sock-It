@@ -33,7 +33,16 @@ class ShoppingCartController < ApplicationController
     end
 
     @shopping_cart.add(product, product.price, quantity)
-    redirect_to cart_path
+
+    if request.xhr?
+      render :json => {
+        :total => @shopping_cart.total,
+        :items => @shopping_cart.shopping_cart_items.length
+        }
+    else
+      redirect_to cart_path
+    end
+
   end
 
   def remove

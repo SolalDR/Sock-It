@@ -15,9 +15,34 @@
           <%= link_to product do %>
           <p class="title"><%= product.name %></p>
           <% end %>
-          <%= link_to "", product_to_cart_path(product.id), class: "add-product-to-cart" %>
+          <%= link_to "", product_to_cart_path(product.id), class: "add-product-to-cart", :data => {:url => product.images[0].file.url(:medium), :title =>  product.name }  %>
         </div>
       </div>
       <% i+=1 %>
       <% end %>
     </div>
+
+  <div id="popinCart" class="hidden">
+    <div class="container-popin">
+      <div class="header-popin">
+        <p class="title">Ajouter au panier avec succès</p>
+        <a href="" class="continue-cart">Continuer mes achats</a>
+        <button id="close-popin"></button>
+      </div>
+      <div class="header-content">
+        <div class="focus-product">
+          <img src="" alt="" id="product-popin-img">
+          <p id="product-popin-title">Chaussette édition spécial bird</p>
+        </div>
+        <div class="focus-cart">
+          <p class="cart-amount">Votre panier :
+            <span id="amount-popin-cart">1 article</span>
+          </p>
+          <p class="total">Total :
+            <span id="total-popin-cart">14 euros</span>
+          </p>
+          <%= link_to "Commander maintenant", payments_fact_path, class:"btn btn-primary btn-command" %>
+        </div>
+      </div>
+    </div>
+  </div>

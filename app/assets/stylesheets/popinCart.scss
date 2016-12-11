@@ -1,0 +1,107 @@
+#popinCart {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, .5);
+  z-index: 999;
+  &.visible {
+    display: block;
+  }
+  &.hidden {
+    display: none;
+  }
+  .container-popin {
+    position: relative;
+    top: 50%;
+    margin: auto;
+    max-width: 700px;
+    transform: translateY(-50%);
+    background-color: white;
+    .header-popin {
+      padding: 15px 20px;
+      border-bottom: 1px solid grey;
+      .title {
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: LatoBold;
+        color:black;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+      }
+      .continue-cart {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: .7em;
+        font-weight: bold;
+        color: black;
+        display: inline-block;
+        float: right;
+        margin-right: 30px;
+      }
+      #close-popin {
+        background-image: asset-url("logo/cross.png");
+        background-position: center;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: 0;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 15px; right: 15px;
+
+      }
+    }
+    .header-content {
+      padding: 20px;
+      display: flex;
+
+      .focus-product {
+        flex: 1;
+        #product-popin-img {
+          vertical-align: middle;
+          width: 200px;
+          height: 200px;
+          display: block;
+          background-color: #CCC;
+        }
+        #product-popin-title {
+          text-transform: uppercase;
+          color: #2b60a3;
+          font-weight: 500;
+          margin-top: 10px;
+          font-size: 1.2em;
+        }
+      }
+      .focus-cart {
+        flex: 1;
+        padding-left: 20%;
+        .cart-amount {
+          font-family: LatoBold;
+          margin-bottom: 20px;
+        }
+        .total {
+          text-align: left;
+          font-size: 1.5em;
+          font-family: LatoBlack;
+          letter-spacing: 1px;
+          margin-bottom: 20px;
+          #total-popin-cart {
+            float: right;
+          }
+        }
+        .btn {
+          width: 100%;
+          color: white;
+          font-size: .8em;
+          font-weight: 100;
+          padding: 10px;
+        }
+      }
+
+    }
+  }
+
+}

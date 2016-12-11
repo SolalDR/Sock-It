@@ -5,7 +5,6 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -25,7 +24,7 @@
         <%= link_to(cart_path) do %>
           <div class="nav-bar-right cart">
             <span class="cart_icon"></span>
-            <span class="number_article"><%= @shopping_cart.total %> €</span>
+            <span class="number_article"><span id="header-total-count"><%= @shopping_cart.total %></span> €</span>
           </div>
         <% end %>
     </header>
@@ -47,5 +46,11 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>
+    <%= javascript_include_tag 'application' %>
+    <script>
+      var config = {
+        "root" : "<%= root_url %>"
+      }
+    </script>
   </body>
 </html>

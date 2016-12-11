@@ -26,18 +26,4 @@ switchPic = {
 
 window.onload = function(){
   switchPic.init();
-
 }
-
-//les images
-  //image principale
-  //image miniature
-
-//switchPic
-  //On inverse les url
-    //On stocke les url
-    //On inverse
-
-
-//Evenement de click
-//Récupérer les images
