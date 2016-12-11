@@ -21,7 +21,7 @@ body {
   margin-left: 12.5%;
 }
 
-.btn-command {
+.btn.btn-command {
   display: inline-block;
   padding: 5px 20px;
   color: white;
@@ -29,6 +29,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 0;
+  font-size: .7em;
+  padding: 10px 20px;
 }
 
 a {

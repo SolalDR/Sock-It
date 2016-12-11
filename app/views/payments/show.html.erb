@@ -1,11 +1,52 @@
 <div class="container" id="payments_container">
   <%= render "arianne" %>
-  <p id="notice"><%= notice %></p>
+  <div class="recap-container">
+    <div class="half-container">
+      <h2>Adresse de facturation</h2>
+      <p><%= @payment.fact_firstname %> <%= @payment.fact_lastname %></p>
+      <p><%= @payment.fact_address %> <%= @payment.fact_addresscomplement %> <%= @payment.fact_addresscomplementbis %></p>
+      <p><%= @payment.fact_zipcode %> <%= @payment.fact_city %></p>
+    </div>
+    <div class="half-container">
+      <h2>Adresse de livraison</h2>
+      <p><%= @payment.deliver_firstname %> <%= @payment.deliver_lastname %></p>
+      <p><%= @payment.deliver_address %> <%= @payment.deliver_addresscomplement %> <%= @payment.deliver_addresscomplementbis %></p>
+      <p><%= @payment.deliver_zipcode %> <%= @payment.deliver_city %></p>
+    </div>
+    <div class="shopping_cart">
+      <h2>Commande</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Quantité</th>
+            <th>Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @payment.shopping_cart.shopping_cart_items.each do |p| %>
+        <% product = Product.find(p.item_id) %>
+        <tr class="product-row">
+          <td class="product">
+            <%= image_tag p.item.images[0].file.url(:thumb) %>
+            <div class="content">
+              <p class="title"><%= p.item.name %></p>
+              <p class="description"><%= p.item.description %></p>
+              <%= link_to "Supprimer", remove_products_from_cart_path({ id: p.item.id, quantity: p.quantity }), class: "delete" %>
+            </div>
+          </td>
+          <td class="quantity">
+            <%= p.quantity %>
+          </td>
+          <td class="price">
+            <%= p.price*p.quantity %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+  </div>
 
-  <% @payment.shopping_cart.shopping_cart_items.each do |p| %>
-  <% product = Product.find(p.item_id) %>
-  <%= product.name %>
-  <%= image_tag product.images[0].file.url(:thumb) %>
-  <% end %>
   <%= link_to 'Acheter', payments_buy_path, class:"btn btn-command" %>
 </div>

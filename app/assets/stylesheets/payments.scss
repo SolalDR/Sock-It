@@ -22,6 +22,7 @@
   }
 }
 
+
 #payments_container {
   h2 {
     margin-top:0;
@@ -44,5 +45,31 @@
         max-width: 650px;
       }
     }
+  }
+  .recap-container {
+    padding: 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+    h2 {
+      margin-top: 0;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      font-family: LatoBold;
+      letter-spacing: 1px;
+      font-weight: 500;
+      color: black;
+    }
+    .half-container {
+      width: calc(50% - 2px);
+      display: inline-block;
+    }
+    .shopping_cart {
+      margin-top: 30px;
+    }
+
+  }
+  .btn-command {
+    width: 300px;
+    margin-top: 20px;
   }
 }
