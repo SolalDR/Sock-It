@@ -25,6 +25,6 @@ production:
   database: sock-it
   encoding: unicode
   host: localhost
-  username: postgres
+  username: user
   pool: 5
   timeout: 5000
