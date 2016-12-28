@@ -1,4 +1,6 @@
-# Sock'It
+# Sock'It 
+
+BUG upload multiple images
 
 <a href="https://codeclimate.com/github/SolalDR/Sock-It"><img src="https://codeclimate.com/github/SolalDR/Sock-It/badges/gpa.svg" /></a>
 
