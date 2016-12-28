@@ -3,33 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #show {
 
-  h3 {
-    color: black;
-    font-size: 19px;
-  }
-  #name{
-    font-size: 2em;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: black;
-  }
-  #price {
-    font-size: 2em;
-    display: inline-block;
-    font-weight: bold;
-    color: blue;
-  }
-  #description {
-    font-size: 18px;
-  }
-  #color {
-    font-size: 1.3em;
-  }
-
-  strong {
-    display: none;
-  }
-
   .image {
     #main-pic {
       width: 500px;
@@ -52,8 +25,29 @@
 
   .fiche-product{
     height: 500px;
+    h3 {
+      color: black;
+      font-size: 19px;
+    }
+    #name{
+      font-size: 1.8em;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: black;
+    }
+    #price {
+      font-size: 2em;
+      display: inline-block;
+      font-weight: bold;
+      color: #173A5A;
+    }
+    strong {
+      display: none;
+    }
     p {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      font-family: "Lato";
+      font-size: 15px;
     }
     .add-product-to-cart {
       display: block;
@@ -69,12 +63,6 @@
       text-align: center;
       padding-top: 15px;
       margin-bottom: 50px;
-    }
-    .size {
-      .pick-size {
-        display: inline-block;
-        border: 1px solid grey;
-      }
     }
   }
 }
