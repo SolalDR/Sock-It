@@ -24,18 +24,34 @@
       <%= @product.name %>
     </p>
 
-    <p id="description">
-      <%= @product.description %>
+    <p id="price">
+      <%= @product.price %>.00 €
     </p>
 
-    <p id="color">Couleur :
+    <div class="size">
+      <p>Taille de votre paire :</p>
+      <p class="pick-size">S</p>
+      <p class="pick-size">M</p>
+      <p class="pick-size">L</p>
+      <p class="pick-size">XL</p>
+
+    </div>
+
+    <%= link_to "Ajouter au pannier", product_to_cart_path(@product), class: "add-product-to-cart" %>
+
+    <h3>Détails du produit :</h3>
+      <p id="description">
+        <%= @product.description %>
+      </p>
+
+<!--    <p id="color">Couleur :
       <%= @product.color %>
     </p>
-
-    <p id="price">Prix :
-      <%= @product.price %> €
-    </p>
-<%= link_to "Ajouter au pannier", product_to_cart_path(@product), class: "add-product-to-cart" %>
+-->
+  <h3>Informations sur la livraison :</h3>
+  <p>
+    Blabla livraison blabla
+  </p>
 
   </div>
 

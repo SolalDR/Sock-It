@@ -16,12 +16,14 @@
           <input id="search_bar" type="text" placeholder="Rechercher">
         </form>
       </div>
+    <%= link_to root_path do %>
       <div class="nav-bar-center title-container">
         <%= link_to root_path do %>
         <h1>Sock-it</h1>
         <p class="sub-title">Paris</p>
         <% end %>
       </div>
+      <% end %> 
         <%= link_to(cart_path) do %>
           <div class="nav-bar-right cart">
             <span class="cart_icon"></span>
