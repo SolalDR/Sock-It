@@ -24,18 +24,33 @@
       <%= @product.name %>
     </p>
 
-    <p id="description">
-      <%= @product.description %>
+    <p id="price">
+      <%= @product.price %>.00 €
     </p>
 
-    <p id="color">Couleur :
+    <div class="size">
+      <p>Taille de votre paire :</p>
+
+    </div>
+
+    <%= link_to "Ajouter au pannier", product_to_cart_path(@product), class: "add-product-to-cart" %>
+
+    <h3>Détails du produit :</h3>
+      <p id="description">
+        <%= @product.description %>
+      </p>
+
+<!--    <p id="color">Couleur :
       <%= @product.color %>
     </p>
-
-    <p id="price">Prix :
-      <%= @product.price %> €
-    </p>
-<%= link_to "Ajouter au pannier", product_to_cart_path(@product), class: "add-product-to-cart" %>
+-->
+  <h3>Informations sur la livraison :</h3>
+  <p>
+    Nos colis sont tous délivré par nos coursiers à pied : jeunes, beaux et rapides, ils vous assurent une livraison en moins de 24h.
+    Nos chaussettes étant d'une qualité et d'une douceur imbattable, vous n'aurez surement pas besoin de l'option "retour",
+    néanmoins, si vous n'avez vraiment pas besoin de chaussettes, sachez qu'il est toujours
+    possible de contactez un de nos coursiers, qui viendra récupérer le produit et vous le rembourser avec le sourire.
+  </p>
 
   </div>
 
