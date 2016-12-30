@@ -1,9 +1,10 @@
-# README
+# Sock'It
+
+BUG upload multiple images
 
 <a href="https://codeclimate.com/github/SolalDR/Sock-It"><img src="https://codeclimate.com/github/SolalDR/Sock-It/badges/gpa.svg" /></a>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+E-commerce application run with ruby on rails.
 
 ##Configuration
 
@@ -24,6 +25,13 @@ git clone https://github.com/SolalDR/Sock-It.git
 ```
 bundle install
 ```
+####Install devise
+In secrets.yml, put
+``` yml
+development:
+  devise_secret_key: my_secret_key_here
+```
+
 
 ####Install stripe
 To install the stripe gem
