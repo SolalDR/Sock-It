@@ -67,6 +67,9 @@ class PaymentsController < ApplicationController
     session[:shopping_cart_id] = nil
     session[:payment_id] = nil
 
+    @payment.complete = true
+    @payment.save
+
     redirect_to payments_success_path
     rescue Stripe::CardError => e
       flash[:error] = e.message

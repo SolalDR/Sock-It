@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170103130229) do
+ActiveRecord::Schema.define(version: 20170103140223) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "libCategory"
@@ -47,9 +47,10 @@ ActiveRecord::Schema.define(version: 20170103130229) do
     t.string   "deliver_zipcode"
     t.string   "deliver_city"
     t.integer  "total_price"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.integer  "user_id"
+    t.boolean  "complete",                     default: false
     t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
