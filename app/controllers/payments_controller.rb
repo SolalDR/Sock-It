@@ -1,7 +1,8 @@
 class PaymentsController < ApplicationController
-  before_action :extract_payment
+  before_action :extract_payment, except: :index
   before_action :define_next_route, only: :update
   before_action :hydrate_present_attributes, only: [:edit_fact, :edit_delivery]
+  before_action :test_admin, only: :index
 
   # GET /payments/all
   # Liste de toute les commande (debuggage)
@@ -114,6 +115,12 @@ class PaymentsController < ApplicationController
   end
 
   private
+
+    def test_admin
+      if !current_user || !current_user.admin
+        redirect_to root_path
+      end
+    end
     # Use callbacks to share common setup or constraints between actions.
     # Never trust parameters from the scary internet, only allow the white list through.
     def payment_params

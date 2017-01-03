@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "/profile" => "profile#show", as: :profile_show
   get "/profile/edit" => "profile#edit", as: :profile_edit
   patch "profile/update" => "profile#update"
-
+  get "/payments/all" => "payments#index", as: :payments_all_path
   get "/payments/fact" => "payments#edit_fact", as: :payments_fact
   get "/payments/delivery" => "payments#edit_delivery", as: :payments_delivery
   get "/payments/show" => "payments#show", as: :payments_show

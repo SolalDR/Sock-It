@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    <% @payments.each do |payment| %>
+      <% if payment.fact_firstname %>
+        <li>
+          <p><%= payment.fact_firstname %> <%= payment.fact_lastname %></p>
+          <p><%= payment.fact_address %> <%= payment.fact_zipcode %> <%= payment.fact_city %></p>
+          <p><%= payment.shopping_cart.shopping_cart_items.length %> produit(s) achetés</p>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

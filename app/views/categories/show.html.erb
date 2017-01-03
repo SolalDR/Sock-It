@@ -18,7 +18,9 @@
     <% i+=1 %>
     <% end %>
   </div>
-  <%= link_to 'Edit', edit_category_path(@category) %> |
-  <%= link_to 'Back', categories_path %>
+  <% if current_user && current_user.admin %>
+    <%= link_to 'Edit', edit_category_path(@category) %> |
+    <%= link_to 'Back', categories_path %>
+  <% end %>
 </div>
 <%= render "layouts/popincart" %>
