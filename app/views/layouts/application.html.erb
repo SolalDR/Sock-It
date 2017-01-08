@@ -27,6 +27,15 @@
       <div class="nav-bar-right">
 
         <% if user_signed_in? %>
+
+          <% if current_user.admin===true %>
+            <%= link_to products_path, :method => :delete do %>
+              <div class="nav_log">
+                <h3>Admin</h3>
+              </div>
+            <% end %>
+          <% end %>
+
           <%= link_to destroy_user_session_path, :method => :delete do %>
             <div class="nav_log">
               <h3>Déconnexion</h3>
