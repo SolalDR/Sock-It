@@ -3,10 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #show {
   margin-top: 50px;
-
+  width: 50%;
   .image {
     #main-pic {
-      width: 500px;
+      width: 100%;
     }
   }
   #container-list-pic {
@@ -14,8 +14,8 @@
     margin-top: 20px;
     li {
       display: inline-block;
-      width: 20%;
-      border: 1px solid black;
+      width: 30%;
+      margin-right: 5px;
     }
 
     img {
@@ -28,7 +28,9 @@
     height: 500px;
     h3 {
       color: black;
-      font-size: 19px;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 2px;
     }
     #name{
       font-size: 1.8em;
@@ -37,10 +39,11 @@
       color: black;
     }
     #price {
-      font-size: 2em;
+      font-size: 1.4em;
       display: inline-block;
-      font-weight: bold;
-      color: #173A5A;
+      font-weight: normal;
+      color: #4182BD;
+      margin-bottom: 0;
     }
     strong {
       display: none;
@@ -56,14 +59,14 @@
       background-color: #707070;
       text-transform: uppercase;
       color: white;
-      font-size: 1.2em;
+      font-size: 1em;
       font-family: "LatoRegular";
       letter-spacing: 1px;
-      width: 400px;
-      height: 50px;
+      width: 100%;
       text-align: center;
-      padding-top: 15px;
-      margin-bottom: 50px;
+      padding: 10px;
+      margin-bottom: 30px;
+      font-weight: 100;
     }
   }
 }

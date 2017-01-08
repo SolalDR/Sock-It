@@ -27,18 +27,14 @@
     <p id="price">
       <%= @product.price %>.00 €
     </p>
-
-    <%= link_to "Ajouter au pannier", product_to_cart_path(@product), class: "add-product-to-cart" %>
-
     <h3>Détails du produit :</h3>
-      <p id="description">
-        <%= @product.description %>
-      </p>
-
-<!--    <p id="color">Couleur :
-      <%= @product.color %>
+    <p id="description">
+      <%= @product.description %>
     </p>
--->
+    <%= link_to "Ajouter au pannier", product_to_cart_path(@product), class: "add-product-to-cart", data:{ url:@product.images.first.file.url, } %>
+
+
+
   <h3>Informations sur la livraison :</h3>
   <p>
     Nos colis sont tous délivré par nos coursiers à pied : jeunes, beaux et rapides, ils vous assurent une livraison en moins de 24h.
@@ -49,7 +45,7 @@
 
   </div>
 
-
+  <%= render "layouts/popincart" %>
   <% if current_user && current_user.admin %>
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>

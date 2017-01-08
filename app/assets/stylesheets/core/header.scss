@@ -51,14 +51,13 @@ header {
         max-height: 100vh;
         border: 1px solid #2b60a3;
       }
-      #button-account{
+      #button-account.button-header {
         border-bottom: 2px solid #2B60A3;
         color: #2B60A3;
-        padding-left: 40px;
       }
     }
-    #button-account {
-      padding-left: 40px;
+    #button-account.button-header {
+      padding-left: 40px !important;
       padding: 0 20px 19px;
       @include transition(.3s);
       &::before {
