@@ -93,7 +93,7 @@ Rails.application.configure do
     },
     :s3_protocol => 'https',
     :url            => ':s3_alias_url',
-    path: '/:class/:attachment/:id_partition/:style/:filename'
+    path: '/:class/:attachment/:id_partition/:style/:filename',
     :s3_host_alias => "s3.eu-west-2.amazonaws.com"
   }
   # Do not dump schema after migrations.
