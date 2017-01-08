@@ -92,10 +92,10 @@ Rails.application.configure do
       s3_region: ENV.fetch('AWS_REGION'),
     },
     :s3_protocol => 'https',
-    :url            => ':s3_alias_url',
-    path: '/:class/:attachment/:id_partition/:style/:filename',
-    :s3_host_alias => "s3.eu-west-2.amazonaws.com"
+    :s3_host_name => "s3.#{ENV['AWS_REGION']}.amazonaws.com"
+
   }
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
