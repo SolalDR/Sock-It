@@ -3,7 +3,7 @@
   <p id="notice"><%= notice %></p>
 
 
-    <div class="image col-md-7 col-sm1-12">
+    <div class="image col-md-6 col-sm1-12">
       <div>
         <% i= @product.images.first %>
         <%= image_tag i.file.url, id:"main-pic" %>
@@ -19,7 +19,7 @@
       </div>
     </div>
 
-  <div class="fiche-product col-md-5 col-sm1-12">
+  <div class="fiche-product col-md-6 col-sm-12">
     <p id="name">
       <%= @product.name %>
     </p>
@@ -27,11 +27,6 @@
     <p id="price">
       <%= @product.price %>.00 €
     </p>
-
-    <div class="size">
-      <p>Taille de votre paire :</p>
-
-    </div>
 
     <%= link_to "Ajouter au pannier", product_to_cart_path(@product), class: "add-product-to-cart" %>
 

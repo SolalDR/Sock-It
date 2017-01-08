@@ -22,13 +22,41 @@
         <p class="sub-title">Paris</p>
         <% end %>
       </div>
-      <% end %> 
+      <% end %>
+
+      <div class="nav-bar-right">
+
+        <% if user_signed_in? %>
+          <%= link_to destroy_user_session_path, :method => :delete do %>
+            <div class="nav_log">
+              <h3>Déconnexion</h3>
+            </div>
+          <% end %>
+        <% else %>
+
+          <%= link_to new_user_session_path do %>
+            <div class="nav_log">
+              <h3>Connexion</h3>
+            </div>
+          <% end %>
+
+          <%= link_to new_user_registration_path do %>
+            <div class="nav_log">
+              <h3>Inscription</h3>
+            </div>
+          <% end %>
+
+        <% end %>
+
         <%= link_to(cart_path) do %>
-          <div class="nav-bar-right cart">
+          <div class="cart">
             <span class="cart_icon"></span>
             <span class="number_article"><span id="header-total-count"><%= @shopping_cart.total %></span> €</span>
           </div>
         <% end %>
+
+      </div>
+
     </header>
       <nav class="main-nav">
         <ul>
