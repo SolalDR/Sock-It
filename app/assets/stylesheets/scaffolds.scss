@@ -17,6 +17,10 @@ body {
   margin: auto;
 }
 
+.small {
+  font-size: 100%;
+}
+
 .col-sm-offset-3-2 {
   margin-left: 12.5%;
 }
@@ -60,9 +64,13 @@ pre {
 
 a {
   color: #000;
-
+  text-decoration: none;
   &:visited {
     color: #666;
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
   }
 
   text-decoration: none;

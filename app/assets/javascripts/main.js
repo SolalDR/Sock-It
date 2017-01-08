@@ -118,6 +118,26 @@ productToCart = {
   }
 }
 
+
+accountManage = {
+  initEvents:function(){
+    var self = this;
+    this.button.addEventListener("click", function(){
+      if(self.container.className.match("small")){
+          self.container.className = self.container.className.replace("small", "big");
+      } else {
+        self.container.className = self.container.className.replace("big", "small");
+      }
+    }, false)
+  },
+  init:function(){
+    this.button = document.getElementById("button-account");
+    this.container = document.getElementById("account_nav");
+    this.initEvents()
+  }
+}
+accountManage.init();
+
 window.addEventListener("load", function(){
   productToCart.init();
 }, false)

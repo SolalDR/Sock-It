@@ -28,30 +28,37 @@
 
         <% if user_signed_in? %>
 
-          <% if current_user.admin===true %>
-            <%= link_to products_path, :method => :delete do %>
-              <div class="nav_log">
-                <h3>Admin</h3>
-              </div>
-            <% end %>
-          <% end %>
+          <div id="account_nav" class="small">
+            <h3 id="button-account" class="button-header">Mon Compte</h3>
+            <div class="nav">
 
-          <%= link_to destroy_user_session_path, :method => :delete do %>
-            <div class="nav_log">
-              <h3>Déconnexion</h3>
+              <% if current_user.admin===true %>
+                <%= link_to products_path do %>
+                  <p class="nav_log">
+                    Admin
+                  </p>
+                <% end %>
+              <% end %>
+
+              <%= link_to destroy_user_session_path, :method => :delete do %>
+                <p class="nav_log">
+                  Déconnexion
+                </p>
+              <% end %>
+
             </div>
-          <% end %>
+          </div>
         <% else %>
 
           <%= link_to new_user_session_path do %>
             <div class="nav_log">
-              <h3>Connexion</h3>
+              <h3 class="button-header">Connexion</h3>
             </div>
           <% end %>
 
           <%= link_to new_user_registration_path do %>
             <div class="nav_log">
-              <h3>Inscription</h3>
+              <h3 class="button-header bg-button">Inscription</h3>
             </div>
           <% end %>
 
