@@ -15,7 +15,7 @@
           <input id="search_bar" type="text" placeholder="Rechercher">
         </form>
       </div>
-    <%= link_to root_path do %>
+      <%= link_to root_path do %>
       <div class="nav-bar-center title-container">
         <%= link_to root_path do %>
         <h1>Sock-it</h1>
@@ -24,7 +24,8 @@
       </div>
       <% end %>
 
-      <div class="nav-bar-right">
+      <p id="burger-button">Menu</p>
+      <div id="nav-burger-button" class="nav-bar-right nav-hidden">
 
         <% if user_signed_in? %>
 
