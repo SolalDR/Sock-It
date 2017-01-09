@@ -164,9 +164,10 @@ accountManage = {
     this.initEvents()
   }
 }
-accountManage.init();
-burgerManage.init();
+
 
 window.addEventListener("load", function(){
   productToCart.init();
+  accountManage.init();
+  burgerManage.init();
 }, false)
