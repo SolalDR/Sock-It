@@ -9,7 +9,7 @@ class ProfileController < ApplicationController
   def update
     respond_to do |format|
       if current_user.update(user_params)
-        format.html { redirect_to profile_show_path, notice: "Le produit a bien été mis à jour." }
+        format.html { redirect_to profile_show_path, notice: "Le profile a bien été mis à jour." }
         format.json { render :show, status: :ok, location: current_user }
       else
         format.html { render :edit }

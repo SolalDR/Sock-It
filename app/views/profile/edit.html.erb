@@ -12,35 +12,35 @@
       </div>
     <% end %>
     <div class="form-group">
-      <%= f.label :firstname %>
+      <%= f.label :firstname, "Prénom" %>
       <%= f.text_field :firstname, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :lastname %>
+      <%= f.label :lastname, "Nom" %>
       <%= f.text_field :lastname, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :address %>
+      <%= f.label :address, "Adresse" %>
       <%= f.text_field :address, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :addresscomplement %>
+      <%= f.label :addresscomplement, "Complément d'adresse" %>
       <%= f.text_field :addresscomplement, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :addresscomplementbis %>
+      <%= f.label :addresscomplementbis, "Complément d'adresse bis" %>
       <%= f.text_field :addresscomplementbis, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :zipcode %>
+      <%= f.label :zipcode, "Code postal" %>
       <%= f.text_field :zipcode, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :city %>
+      <%= f.label :city, "Ville" %>
       <%= f.text_field :city, class:"form-control" %>
     </div>
     <div class="actions">
-      <%= f.submit class:"btn btn-primary" %>
+      <%= f.submit "Sauvegarder", class:"btn btn-primary" %>
     </div>
   <% end %>
 </div>
