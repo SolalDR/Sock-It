@@ -1,9 +1,9 @@
 <div id="category-show" class="container">
   <h1><%= @category.libCategory %></h1>
-  <div class="row products-container">
+  <div class="products-container">
     <% i = 0 %>
     <% @products.each do |product| %>
-    <div class="product col-sm-3 <% if i%3===0 %>col-sm-offset-3-2<% end %>">
+    <div class="product">
       <p class="price"><%= product.price %>€</p>
       <div class="visuel">
         <%= image_tag product.images[0].file.url(:medium) %>
