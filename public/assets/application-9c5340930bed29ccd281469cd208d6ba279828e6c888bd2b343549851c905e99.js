@@ -11682,6 +11682,55 @@ productToCart = {
   }
 }
 
+burgerManage = {
+  display:function(){
+    if(this.nav.className.match("nav-hidden")){
+      this.nav.className = this.nav.className.replace("nav-hidden", "nav-visible")
+    }
+  },
+  hide:function(){
+    if(this.nav.className.match("nav-visible")){
+      this.nav.className = this.nav.className.replace("nav-visible", "nav-hidden")
+    }
+  },
+  initEvents:function(){
+    var self = this;
+    this.button.addEventListener("click", function(){
+      if(self.nav.className.match("nav-visible")){
+        self.hide();
+      } else {
+        self.display();
+      }
+    }, false)
+  },
+  init:function(){
+    this.button = document.getElementById("burger-button");
+    this.nav = document.getElementById("nav-burger-button");
+    this.initEvents();
+  }
+}
+
+
+accountManage = {
+  initEvents:function(){
+    var self = this;
+    this.button.addEventListener("click", function(){
+      if(self.container.className.match("small")){
+          self.container.className = self.container.className.replace("small", "big");
+      } else {
+        self.container.className = self.container.className.replace("big", "small");
+      }
+    }, false)
+  },
+  init:function(){
+    this.button = document.getElementById("button-account");
+    this.container = document.getElementById("account_nav");
+    this.initEvents()
+  }
+}
+accountManage.init();
+burgerManage.init();
+
 window.addEventListener("load", function(){
   productToCart.init();
 }, false)

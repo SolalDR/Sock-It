@@ -77,22 +77,160 @@ header .searchBar form #search_bar:focus {
   border-bottom: 1px solid black;
 }
 /* line 31, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header .button-header {
+  margin-bottom: 0;
+  padding: 0 20px;
+  color: #555;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: regular;
+  font-size: 1em;
+  border-bottom: 2px solid transparent;
+}
+/* line 40, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header .button-header.bg-button {
+  background-color: #3670a1;
+  color: white;
+}
+/* line 46, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header #account_nav.small .nav {
+  max-height: 0;
+}
+/* line 50, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header #account_nav.big .nav {
+  max-height: 100vh;
+  border: 1px solid #2b60a3;
+}
+/* line 54, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header #account_nav.big #button-account.button-header {
+  border-bottom: 2px solid #2B60A3;
+  color: #2B60A3;
+}
+/* line 59, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header #account_nav #button-account.button-header {
+  padding-left: 40px !important;
+  padding: 0 20px 19px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+/* line 63, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header #account_nav #button-account.button-header::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url(/assets/logo/avatar-853cdd4da55ca5e59b0c1830ac035d0bde240d98251dd9d50333a2dce18fe72a.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: 25px;
+}
+/* line 77, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header #account_nav .nav {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  z-index: 999;
+  border: 0px solid transparent;
+}
+/* line 85, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header #account_nav .nav_log {
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  text-decoration: none;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+/* line 91, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header #account_nav .nav_log:hover {
+  background-color: #2B60A3;
+  color: white;
+}
+/* line 98, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
 header .title-container {
   padding: 5px;
-  padding-top: 15px;
+  padding-top: 12px;
 }
-/* line 34, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+/* line 101, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
 header .title-container h1 {
   font-family: "LatoBlack";
   text-transform: uppercase;
   font-size: 2em;
 }
-/* line 43, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
-header .cart {
+
+/* line 113, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header {
+  height: 70px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+  color: black;
+}
+/* line 123, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header .nav-bar-left {
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+/* line 130, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header .nav-bar-center {
+  display: inline-block;
+  height: 70px;
+}
+/* line 134, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header #burger-button {
+  margin-bottom: 0;
+  padding: 0 20px;
+  color: #555;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: regular;
+  font-size: 1em;
+  border-bottom: 2px solid transparent;
+  position: absolute;
+  right: -100px;
+  top: 25px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+/* line 148, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header .nav-bar-right {
+  height: 70px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-flex;
+}
+/* line 157, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header .nav-bar-right h3 {
+  padding-left: 20px;
+  line-height: 30px;
+}
+/* line 163, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header .nav-bar-right .cart {
   padding: 25px 50px 0px;
 }
-/* line 45, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
-header .cart .cart_icon {
+/* line 165, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header .nav-bar-right .cart .cart_icon {
   background-image: url(/assets/logo/shopping-bag-8c35d2ceab8550c24d418e80fe434a68a77b01c71d4298d78209a2d280a6d8fa.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -102,60 +240,29 @@ header .cart .cart_icon {
   display: inline-block;
   float: left;
 }
-/* line 55, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
-header .cart .number_article {
+/* line 175, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+header .nav-bar-right .cart .number_article {
   margin-top: 2px;
   margin-left: 5px;
   display: inline-block;
 }
 
-/* line 63, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
-header {
-  height: 80px;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 2;
-}
-/* line 72, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
-header .nav-bar-left {
-  height: 70px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-/* line 78, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
-header .nav-bar-center {
-  display: inline-block;
-  height: 70px;
-}
-/* line 82, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
-header .nav-bar-right {
-  height: 70px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-/* line 90, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+/* line 184, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
 .main-nav {
   background-color: white;
   height: 60px;
   text-align: center;
 }
-/* line 94, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+/* line 188, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
 .main-nav ul {
   height: 100%;
   display: inline-block;
 }
-/* line 97, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+/* line 191, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
 .main-nav ul a {
   text-decoration: none;
 }
-/* line 99, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+/* line 193, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
 .main-nav ul a li {
   display: inline-block;
   padding: 10px 15px;
@@ -165,6 +272,104 @@ header .nav-bar-right {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 750px) {
+  /* line 208, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header #burger-button {
+    right: 20px;
+    padding: 20px;
+    top: 5px;
+  }
+  /* line 212, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header #burger-button::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url(/assets/logo/menu-a6924b4d7ccc6af38a82b653725d9e09dd4d4c3c0e71ad3a1279472161ec9167.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -10px;
+    top: 19px;
+  }
+  /* line 227, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header #nav-burger-button {
+    top: 70px;
+  }
+  /* line 228, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header #nav-burger-button.nav-hidden {
+    right: -100%;
+  }
+  /* line 232, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header #nav-burger-button .nav_log {
+    width: 100%;
+    display: block;
+  }
+  /* line 238, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header .nav-bar-right {
+    height: 70px;
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    background-color: #eeeeee;
+    color: white;
+    height: calc(100vh - 70px);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  /* line 249, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header .nav-bar-right h3 {
+    padding-left: 20px;
+    line-height: 30px;
+  }
+  /* line 256, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header .nav-bar-right #account_nav.small .nav {
+    border-bottom: 0px solid #2B60A3;
+  }
+  /* line 260, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header .nav-bar-right #account_nav .nav {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #2B60A3;
+  }
+  /* line 265, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header .nav-bar-right #account_nav .nav_log {
+    background-color: transparent;
+    border: 0;
+  }
+  /* line 268, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header .nav-bar-right #account_nav .nav_log:hover  {
+    background-color: transparent;
+    color: black;
+  }
+  /* line 276, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header .nav-bar-right .cart {
+    padding: 10px 10px;
+    text-align: left;
+  }
+  /* line 279, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header .nav-bar-right .cart .cart_icon {
+    background-image: url(/assets/logo/shopping-bag-8c35d2ceab8550c24d418e80fe434a68a77b01c71d4298d78209a2d280a6d8fa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+  }
+  /* line 289, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/core/header.scss */
+  header .nav-bar-right .cart .number_article {
+    margin-top: 2px;
+    margin-left: 10px;
+    display: inline-block;
+  }
+}
 /* line 1, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 body {
   background-color: #fff;
@@ -190,11 +395,16 @@ body {
 }
 
 /* line 20, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+.small {
+  font-size: 100%;
+}
+
+/* line 24, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 .col-sm-offset-3-2 {
   margin-left: 12.5%;
 }
 
-/* line 24, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 28, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 .btn.btn-command {
   display: inline-block;
   padding: 5px 20px;
@@ -207,23 +417,23 @@ body {
   padding: 10px 20px;
 }
 
-/* line 36, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 40, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 a {
   text-decoration: none;
 }
 
-/* line 39, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 43, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 header .title-container a h1 {
   margin: 0;
   color: black;
   text-decoration: none;
 }
-/* line 43, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 47, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 header .title-container a h1:hover {
   text-decoration: none;
 }
 
-/* line 48, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 52, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -231,53 +441,59 @@ p, ol, ul, td {
   margin: 0;
 }
 
-/* line 55, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 59, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
 
-/* line 61, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 65, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 a {
   color: #000;
   text-decoration: none;
+  text-decoration: none;
 }
-/* line 64, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 68, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 a:visited {
   color: #666;
+  text-decoration: none;
+}
+/* line 72, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  text-decoration: none;
 }
 
-/* line 71, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 79, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 th {
   padding-bottom: 5px;
 }
 
-/* line 75, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 83, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 td {
   padding-bottom: 7px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-/* line 82, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 90, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 div.field, div.actions {
   margin-bottom: 10px;
 }
 
-/* line 87, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 95, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 #notice {
   color: green;
 }
 
-/* line 91, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 99, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
 
-/* line 97, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 105, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -286,7 +502,7 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-/* line 105, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 113, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -297,43 +513,43 @@ div.field, div.actions {
   background-color: #c00;
   color: #fff;
 }
-/* line 116, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 124, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
 }
 
-/* line 122, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 130, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 label {
   display: block;
 }
 
-/* line 126, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 134, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 .bg-grey-light {
   background-color: #d8d8d8;
 }
 
-/* line 129, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 137, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 .bg-blue {
   background-color: #6bc5d8;
 }
 
-/* line 132, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 140, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 .bg-grey-dark {
   background-color: #64666a;
 }
 
-/* line 135, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 143, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 #notice {
   background-color: #173A5A;
 }
 
-/* line 138, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 146, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 #alert  {
   background-color: #651616;
 }
 
-/* line 142, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+/* line 150, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
 #notice, #alert {
   position: fixed;
   bottom: -100px;
@@ -369,83 +585,91 @@ label {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 177, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+  /* line 185, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
   .wrapper-small {
     width: 100%;
   }
 
-  /* line 180, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
+  /* line 188, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/scaffolds.scss */
   .col-sm-offset-3-2 {
     margin-left: 0;
   }
 }
-/* line 7, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
-#show .image #main-pic {
-  width: 500px;
+/* line 4, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+#show {
+  margin-top: 50px;
+  width: 50%;
 }
-/* line 11, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 8, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+#show .image #main-pic {
+  width: 100%;
+}
+/* line 12, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show #container-list-pic {
   margin-top: 20px;
 }
-/* line 14, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 15, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show #container-list-pic li {
   display: inline-block;
-  width: 20%;
-  border: 1px solid black;
+  width: 30%;
+  margin-right: 5px;
 }
-/* line 20, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 21, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show #container-list-pic img {
   display: block;
   width: 100%;
 }
-/* line 26, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 27, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show .fiche-product {
   height: 500px;
 }
-/* line 28, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 29, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show .fiche-product h3 {
   color: black;
-  font-size: 19px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 2px;
 }
-/* line 32, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 35, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show .fiche-product #name {
   font-size: 1.8em;
   line-height: 20px;
   text-transform: uppercase;
   color: black;
 }
-/* line 38, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 41, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show .fiche-product #price {
-  font-size: 2em;
+  font-size: 1.4em;
   display: inline-block;
-  font-weight: bold;
-  color: #173A5A;
+  font-weight: normal;
+  color: #4182BD;
+  margin-bottom: 0;
 }
-/* line 44, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 48, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show .fiche-product strong {
   display: none;
 }
-/* line 47, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 51, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show .fiche-product p {
   margin-bottom: 20px;
   font-family: "Lato";
   font-size: 15px;
 }
-/* line 52, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
+/* line 56, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/products.scss */
 #show .fiche-product .add-product-to-cart {
   display: block;
   border: 1px solid #707070;
   background-color: #707070;
   text-transform: uppercase;
   color: white;
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: "LatoRegular";
   letter-spacing: 1px;
-  width: 400px;
-  height: 50px;
+  width: 100%;
   text-align: center;
-  padding-top: 15px;
-  margin-bottom: 50px;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-weight: 100;
 }
 
 /* line 3, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
@@ -454,25 +678,32 @@ label {
   display: block;
 }
 
-/* line 11, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 10, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+.products-container {
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* line 17, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product {
   border: 1px solid grey;
-  border-left: 0px;
+  margin: 20px;
   margin-bottom: 30px;
+  width: calc(33% - 40px);
+  min-width: 250px;
 }
-/* line 15, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
-.products-container .product.col-sm-offset-3-2 {
-  border-left: 1px solid grey;
-}
-/* line 18, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 24, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .visuel {
   position: relative;
 }
-/* line 20, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 26, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .visuel img {
-  margin-left: -15px;
+  width: calc(100%);
 }
-/* line 23, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 29, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .visuel .list-color {
   width: 100%;
   position: absolute;
@@ -480,7 +711,7 @@ label {
   left: 3%;
   height: 15px;
 }
-/* line 29, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 35, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .visuel .list-color .color {
   width: 15px;
   height: 15px;
@@ -488,11 +719,11 @@ label {
   margin-right: 0px;
   border: 1px solid transparent;
 }
-/* line 35, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 41, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .visuel .list-color .color.active {
   border: 1px solid white;
 }
-/* line 41, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 47, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .price {
   padding: 10px;
   color: grey;
@@ -500,15 +731,16 @@ label {
   font-family: "LatoLight";
   letter-spacing: 2px;
 }
-/* line 48, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 54, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .content {
   height: 40px;
   position: relative;
 }
-/* line 51, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 57, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .content .title {
   padding: 0;
   padding-top: 10px;
+  margin-left: 15px;
   font-size: 10px;
   text-transform: uppercase;
   font-weight: normal;
@@ -520,18 +752,18 @@ label {
   transition: .3s;
   text-decoration: none;
 }
-/* line 64, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 71, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .content .title:hover {
   color: #3d3d3d;
 }
-/* line 68, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+/* line 75, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
 .products-container .product .content .add-product-to-cart {
   display: inline-block;
   height: 40px;
   width: 40px;
   position: absolute;
   top: 0;
-  right: -15px;
+  right: 0px;
   border: 0;
   border-left: 1px solid #707070;
   background-repeat: no-repeat;
@@ -541,14 +773,14 @@ label {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 86, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+  /* line 93, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
   .products-container {
-    width: 60%;
+    width: 90%;
     margin: auto;
   }
 }
 @media screen and (max-width: 467px) {
-  /* line 92, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
+  /* line 99, /Users/Solal/Documents/MMI/MMI 2A/Projets/SockIt/app/assets/stylesheets/homepage.scss */
   .products-container {
     width: 90%;
     margin: auto;
