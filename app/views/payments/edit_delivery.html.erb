@@ -3,31 +3,31 @@
   <%= form_for @payment do |f| %>
     <h2>Livraison</h2>
     <div class="form-group">
-      <%= f.label :deliver_firstname %>
+      <%= f.label :deliver_firstname, "Prénom *" %>
       <%= f.text_field :deliver_firstname, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :deliver_lastname %>
+      <%= f.label :deliver_lastname, "Nom *" %>
       <%= f.text_field :deliver_lastname, class:"form-control" %>
     </div>
     <div class="form-group form-large">
-      <%= f.label :deliver_address %>
+      <%= f.label :deliver_address, "Adresse de livraison *" %>
       <%= f.text_field :deliver_address, class:"form-control" %>
     </div>
     <div class="form-group form-large">
-      <%= f.label :deliver_addresscomplement %>
+      <%= f.label :deliver_addresscomplement, "Complément d'addresse" %>
       <%= f.text_field :deliver_addresscomplement, class:"form-control" %>
     </div>
     <div class="form-group form-large">
-      <%= f.label :deliver_addresscomplementbis %>
+      <%= f.label :deliver_addresscomplementbis, "Complément d'addresse bis" %>
       <%= f.text_field :deliver_addresscomplementbis, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :deliver_zipcode %>
+      <%= f.label :deliver_zipcode, "Code postal *" %>
       <%= f.text_field :deliver_zipcode, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :deliver_city %>
+      <%= f.label :deliver_city, "Ville *" %>
       <%= f.text_field :deliver_city, class:"form-control" %>
     </div>
     <%= f.hidden_field :step, value: "delivery" %>

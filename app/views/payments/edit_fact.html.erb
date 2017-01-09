@@ -3,31 +3,31 @@
   <%= form_for @payment do |f| %>
   <h2>Facturation</h2>
     <div class="form-group">
-      <%= f.label :fact_firstname %>
+      <%= f.label :fact_firstname, "Prénom *" %>
       <%= f.text_field :fact_firstname, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :fact_lastname %>
+      <%= f.label :fact_lastname, "Nom *" %>
       <%= f.text_field :fact_lastname, class:"form-control" %>
     </div>
     <div class="form-group form-large">
-      <%= f.label :fact_address %>
+      <%= f.label :fact_address, "Addresse de facturation *" %>
       <%= f.text_field :fact_address, class:"form-control" %>
     </div>
     <div class="form-group form-large">
-      <%= f.label :fact_addresscomplement %>
+      <%= f.label :fact_addresscomplement, "Complément d'adresse" %>
       <%= f.text_field :fact_addresscomplement, class:"form-control" %>
     </div>
     <div class="form-group form-large">
-      <%= f.label :fact_addresscomplementbis %>
+      <%= f.label :fact_addresscomplementbis, "Complement d'adresse bis" %>
       <%= f.text_field :fact_addresscomplementbis, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :fact_zipcode %>
+      <%= f.label :fact_zipcode, "Code Postal *" %>
       <%= f.text_field :fact_zipcode, class:"form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :fact_city %>
+      <%= f.label :fact_city, "Ville *" %>
       <%= f.text_field :fact_city, class:"form-control" %>
     </div>
     <%= f.hidden_field :step, value: "fact" %>
