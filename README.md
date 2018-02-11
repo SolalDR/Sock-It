@@ -2,8 +2,6 @@
 
 BUG upload multiple images
 
-<a href="https://codeclimate.com/github/SolalDR/Sock-It"><img src="https://codeclimate.com/github/SolalDR/Sock-It/badges/gpa.svg" /></a>
-
 E-commerce application run with ruby on rails.
 
 ##Configuration
